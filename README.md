@@ -12,3 +12,4 @@
  `src/test/java/...`
 - Controller tests
 - Service tests
+- Repo tests
