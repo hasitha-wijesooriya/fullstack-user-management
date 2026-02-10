@@ -10,11 +10,11 @@
 - Testing: JUnit, Mockito, Jest
 
 ### API Endpoins
--|`GET` | `/user/find-all` | Get all users (paginated) |
--| `GET` | `/user/find-by-id/{id}` | Get user by ID |
--| `POST` | `/user/create` | Create a new user |
--| `PUT` | `/user/update/{id}` | Update existing user |
--| `DELETE` | `/user/delete/{id}` | Delete a user |
+- `GET` | `/user/find-all` | Get all users (paginated) 
+- `GET` | `/user/find-by-id/{id}` | Get user by ID 
+- `POST` | `/user/create` | Create a new user 
+- `PUT` | `/user/update/{id}` | Update existing user 
+- `DELETE` | `/user/delete/{id}` | Delete a user 
   
  `src/test/java/...`
 - Controller tests
