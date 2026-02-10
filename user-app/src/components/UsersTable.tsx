@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from "react";
+
 export type User = {
   userId: string;
   name: string;
@@ -20,6 +22,19 @@ export default function UsersTable({
   onDelete: (u: User) => void;
 }) {
 
+  const [searchText, setSearchText] = useState("");
+
+  const filteredUsers = users.filter((u) => {
+    if (!searchText.trim()) return true;
+
+    const search = searchText.toLowerCase();
+    return (
+      u.name?.toLowerCase().includes(search) ||
+      u.email?.toLowerCase().includes(search) ||
+      u.mobile?.toLowerCase().includes(search) ||
+      u.userId?.toLowerCase().includes(search)
+    );
+  });
 
   return (
     <div className="w-full overflow-x-auto">
@@ -30,6 +45,8 @@ export default function UsersTable({
 
         <div className="flex items-center gap-2">
           <input
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
             placeholder="Search users..."
             className="h-10 w-48 rounded-xl border border-slate-200 bg-white px-3 text-sm outline-none focus:border-slate-300"
           />
@@ -50,7 +67,7 @@ export default function UsersTable({
         </thead>
 
         <tbody className="divide-y divide-slate-200">
-          {users.map((u) => (
+          {filteredUsers.map((u) => (
             <tr key={u.userId} className="hover:bg-slate-50">
               <td className="px-4 py-3">
                 <div className="flex items-center gap-3">
