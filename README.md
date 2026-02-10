@@ -4,7 +4,7 @@
 - user-app : Next js build frontend with Redux Toolkit
 
 ### Backend
--Server-Port: 8081
+- Server-Port: 8081
 - Database: MySQL
 - Java 17+
 - Testing: JUnit, Mockito, Jest
