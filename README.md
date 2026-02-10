@@ -10,24 +10,27 @@
 - Testing: JUnit, Mockito, Jest
 
 ### API Endpoins
-|`GET` | `/user/find-all` | Get all users (paginated) |
-| `GET` | `/user/find-by-id/{id}` | Get user by ID |
-| `POST` | `/user/create` | Create a new user |
-| `PUT` | `/user/update/{id}` | Update existing user |
-| `DELETE` | `/user/delete/{id}` | Delete a user |
+-|`GET` | `/user/find-all` | Get all users (paginated) |
+-| `GET` | `/user/find-by-id/{id}` | Get user by ID |
+-| `POST` | `/user/create` | Create a new user |
+-| `PUT` | `/user/update/{id}` | Update existing user |
+-| `DELETE` | `/user/delete/{id}` | Delete a user |
   
  `src/test/java/...`
 - Controller tests
 - Service tests
 - Repo tests
 
+---
+
 ### Frontend
 
-- - View all users in a table
-- - Create new users
-- - Edit existing users
-- - Delete users with confirmation dialog
-- - View user details (read-only mode)
-- - Toast notifications for all actions
+-  View all users in a table
+-  Create new users
+-  Edit existing users
+-  Delete users with confirmation dialog
+-  View user details (read-only mode)
+-  Toast notifications for all actions
+-  Search users
 
 
